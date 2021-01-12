@@ -1,9 +1,6 @@
 const Clarifai = require('clarifai');
-const ClarifaiAPIKey = require('./ClarifaiAPIKey');
 
-console.log(process.env.CLARIFAIAPIKEY);
-const app = new Clarifai.App(process.env.CLARIFAIAPIKEY ? {apiKey: process.env.CLARIFAIAPIKEY} 
-  : ClarifaiAPIKey.ClarifaiAPIKey);
+const app = new Clarifai.App({apiKey: process.env.CLARIFAIAPIKEY});
 
 const handledClarifaiRequest = (req, res) => {
   app.models.predict(Clarifai.CELEBRITY_MODEL, req.body.input)
