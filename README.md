@@ -6,7 +6,7 @@ Deployment follows the usual suit:
 npm install  
 npm start
 
-Before running, a Clarifai API key must be acquired and entered into the code or used as a enviroment variable.  
+Before running, a Clarifai API key must be acquired and entered into the code or used as a enviroment variable, (free from their website).  
 
 PostgreSQL is used as the database in this implementation, with the following tables:  
 
