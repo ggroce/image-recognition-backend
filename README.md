@@ -6,4 +6,23 @@ Deployment follows the usual suit:
 npm install  
 npm start
 
-Before running, the "ClarifaiAPIKey.js" file will need to be supplied by the user, containing an API key for Clarifai, (which is available for free).  
+Before running, a Clarifai API key must be acquired and entered into the code or used as a enviroment variable, (free from their website).  
+
+PostgreSQL is used as the database in this implementation, with the following tables:  
+
+```
+CREATE TABLE login (
+id serial PRIMARY KEY, 
+hash VARCHAR(100) NOT NULL, 
+email text UNIQUE NOT NULL
+);
+
+CREATE TABLE users (
+id serial PRIMARY KEY, 
+name VARCHAR(50), 
+email text UNIQUE NOT NULL, 
+entries BIGINT DEFAULT 0, 
+joined TIMESTAMP NOT NULL
+);
+```  
+
