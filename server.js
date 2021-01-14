@@ -14,18 +14,6 @@ const db = require('knex')({
   }
 });
 
-// const db = require('knex')({
-//   client: 'pg',
-//   connection: {
-//     host : '127.0.0.1',
-//     user : 'postgres',
-//     password : '',
-//     database : 'smart-brain'
-//   }
-// });
-
-console.log(db);
-
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -44,6 +32,6 @@ app.put('/image', (req, res) => {image.handleImageCountInc(req, res, db) });
 
 app.post('/imageurl', (req, res) => { image.handledClarifaiRequest(req, res) });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`server running on port ${process.env.PORT}`);
 })
