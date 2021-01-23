@@ -1,7 +1,7 @@
 # image-recognition-backend
-Node.js backend for image recognition
+This is the Node.js backend for the React image-recognition-frontend, located <a href='https://github.com/ggroce/image-recognition-frontend'>here</a>.  This backend uses Express, where it handles user registration/login, and serves requests related to Clarifai image recognition API requests.  
 
-Deployment follows the usual suit: 
+After cloning, deployment follows the usual suit: 
 
 `npm install`  
 `npm start`
