@@ -3,10 +3,10 @@ Node.js backend for image recognition
 
 Deployment follows the usual suit: 
 
-npm install  
-npm start
+`npm install`  
+`npm start`
 
-Before running, a Clarifai API key must be acquired and entered into the code or used as a enviroment variable, (free from their website).  
+Before running, a Clarifai API key must be acquired and entered into the code or used as a enviroment variable, (available for free when creating an account at <a href="https://www.clarifai.com/">Clarifai</a>).  
 
 PostgreSQL is used as the database in this implementation, with the following tables:  
 
